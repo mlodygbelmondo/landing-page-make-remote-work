@@ -1,0 +1,183 @@
+.homepage-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+    padding-top: 3rem !important;
+    padding: 0 13rem;
+
+    .right-section-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            height: 80vh;
+        }
+        .mobile-version {
+            display: none;
+        }
+    }
+    .left-section-container {
+        padding: 0 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+        justify-content: center;
+        .headers {
+            h1 {
+                font-size: 5rem;
+                color: var(--black-clr);
+            }
+            h2 {
+                display: none;
+            }
+        }
+        p {
+            color: var(--gray-clr);
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+        }
+        button {
+            cursor: pointer;
+            color: var(--white-clr);
+            background-color: var(--black-clr);
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 1px solid var(--black-clr);
+            transition: 0.3s ease-in-out;
+            &:hover {
+                border: 1px solid var(--black-clr);
+                color: var(--black-clr);
+                background-color: var(--white-clr);
+            }
+        }
+        .sponsors-container {
+            margin-top: 4rem;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+    @media only screen and (max-device-width: 1758px) {
+        padding: 0 8rem;
+    }
+    @media only screen and (max-device-width: 1600px) {
+        padding: 0 4rem;
+        .left-section-container {
+            .headers {
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    @media only screen and (max-device-width: 1200px) {
+        padding: 0 2rem;
+        .left-section-container {
+            padding: 0 0.5rem;
+            .headers {
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+            p {
+                font-size: 1.25rem;
+            }
+            gap: 2rem;
+            .sponsors-container {
+                gap: 0.5rem;
+            }
+        }
+    }
+    @media only screen and (min-device-width: 2000px) {
+        padding: 0 15%;
+    }
+    @media only screen and (max-device-width: 1024px) {
+        .right-section-container {
+            img {
+                height: auto;
+                width: 40vw;
+            }
+        }
+    }
+    @media only screen and (max-device-width: 800px) {
+        .left-section-container {
+            padding: 0;
+            .headers {
+                h1 {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-device-width: 780px) {
+        .right-section-container {
+            .desktop-version {
+                display: none;
+            }
+            .mobile-version {
+                display: flex;
+            }
+            img {
+                width: 65vw;
+            }
+        }
+        .left-section-container {
+            align-items: center;
+            text-align: center;
+            .headers {
+                justify-content: center;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+            }
+            .sponsors-container {
+                margin-top: 0;
+            }
+        }
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    @media only screen and (max-device-width: 600px) {
+        padding: 0;
+        .right-section-container {
+            img {
+                width: 100vw;
+            }
+        }
+        .left-section-container {
+            .headers {
+                margin-top: 2rem;
+                h1 {
+                    display: none;
+                }
+                h2 {
+                    display: block;
+                    font-size: 3rem;
+                    color: var(--black-clr);
+                    padding: 0 1rem;
+                }
+            }
+            p {
+                padding: 0 2rem;
+                font-size: 1.5rem;
+            }
+            button {
+                font-size: 1.6rem;
+                padding: 1.4rem 2.15rem;
+            }
+            .sponsors-container {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

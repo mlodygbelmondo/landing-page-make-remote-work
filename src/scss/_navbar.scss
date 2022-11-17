@@ -1,0 +1,145 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-clr);
+    padding: 1.5rem 3rem;
+    position: fixed;
+    width: 100vw;
+    .left-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        .links-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            a {
+                font-weight: 400;
+                text-decoration: none;
+                font-size: 18px;
+                color: var(--gray-clr);
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    .label {
+                        color: var(--black-clr);
+                        img {
+                            filter: brightness(2%);
+                        }
+                    }
+                }
+                .label {
+                    img {
+                        position: relative;
+                        bottom: 3px;
+                        left: 2px;
+                    }
+                }
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                .active-features {
+                    &.closed {
+                        display: none;
+                    }
+                    background-color: #fff;
+                    padding: 1.5rem;
+                    border-radius: 0.7rem;
+                    position: absolute;
+                    z-index: 99;
+                    top: 4.5rem;
+                    left: 9.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    box-shadow: 7px 9px 36px -9px rgba(160, 158, 158, 0.69);
+                    -webkit-box-shadow: 7px 9px 36px -9px rgba(160, 158, 158, 0.69);
+                    -moz-box-shadow: 7px 9px 36px -9px rgba(160, 158, 158, 0.69);
+                    .active-item {
+                        font-size: 0.95rem;
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        img {
+                            position: relative;
+                            bottom: 2px;
+                        }
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: var(--black-clr);
+                        }
+                        .reminders-label {
+                            position: relative;
+                            left: 1px;
+                        }
+                    }
+                    &.company {
+                        left: 20rem;
+                    }
+                    .reminders {
+                        position: relative;
+                        left: 1px;
+                    }
+                }
+            }
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                position: relative;
+                top: 3px;
+                cursor: pointer;
+            }
+        }
+    }
+    .right-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        .hamburger-menu {
+            display: none;
+        }
+        .nav-btn {
+            transition: 0.1s ease-in-out;
+            font-family: 'Epilogue', sans-serif;
+            color: var(--gray-clr);
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--white-clr);
+            border-radius: 1rem;
+            &:hover {
+                color: var(--black-clr);
+            }
+            &.login-btn {
+                border: none;
+            }
+            &.register-btn {
+                border: solid 1.5px var(--gray-clr);
+                &:hover {
+                    border: solid 1.5px var(--black-clr);
+                }
+            }
+        }
+    }
+    @media only screen and (max-device-width: 1024px) {
+        .left-container {
+            .links-container {
+                display: none;
+            }
+        }
+        .right-container {
+            button {
+                display: none;
+            }
+            .hamburger-menu {
+                display: block;
+            }
+        }
+    }
+}
